@@ -1,6 +1,6 @@
 ﻿using LeetCode.Solutions;
 
-Console.WriteLine("Welcome, this is my app with LeetCode problem solutions.\tIf you want to quit, than write Q and press Enter.");
+Console.WriteLine("Welcome, this is my (Maksim Antonov) app with LeetCode problem solutions.\tIf you want to quit, than write Q and press Enter.");
 
 start:
 
