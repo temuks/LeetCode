@@ -8,7 +8,7 @@ Console.WriteLine("Available options:");
 Console.WriteLine("1. Two Sum (Easy)");
 Console.WriteLine("9. Palindrome Number (Easy)");
 Console.WriteLine("13. Roman to Integer (Easy level)");
-Console.WriteLine("Longest Common Prefix (Easy level)");
+Console.WriteLine("14. Longest Common Prefix (Easy level)");
 
 var val = Console.ReadLine();
 
@@ -29,7 +29,7 @@ palindromeStart:
         Console.WriteLine("Please write the number. \tIf you want quit write Q and press Enter.");
         var checkString = Console.ReadLine();
         Console.WriteLine();
-        var checkNumber = 0;
+        int checkNumber;
         if (!string.IsNullOrWhiteSpace(checkString))
         {
             if (checkString is "q" or "Q")
@@ -82,9 +82,9 @@ lcpStart:
         if (lcpStr is "Q" or "q")
             goto start;
 
-        string[] strings = lcpStr.Split(' ').ToArray();
+        var strings = lcpStr.Split(' ').ToArray();
         
-        string ans = LongestCommonPrefix.Result(strings);
+        var ans = LongestCommonPrefix.Result(strings);
  
         if (ans.Length > 0)
         {
