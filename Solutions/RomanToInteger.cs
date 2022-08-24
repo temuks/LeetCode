@@ -26,10 +26,16 @@ public class RomanToInteger
             }
 
             romanNumbersDictionary.TryGetValue(currentRomanChar, out int num);
-
-            if (i + 1 < s.Length && romanNumbersDictionary[s[i + 1]] > romanNumbersDictionary[currentRomanChar])
-                sum -= num;
-            else sum += num;
+            
+            if (i > 0) {
+                if (num > romanNumbersDictionary[s[i-1]]) {
+                    sum += num - 2 * romanNumbersDictionary[s[i-1]];
+                } else {
+                    sum += num;
+                }
+            } else {
+                sum += num;
+            }
         }
 
         return sum;
